@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.component.html',
-  styleUrls: ['./listado.component.css']
 })
-export class ListadoComponent implements OnInit {
+export class ListadoComponent {
+	colores: string[] = ['azul', 'rojo', 'amarillo', 'purpura', 'rosa', 'verde'];
+	colorBorrado: string = '';
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+	borrarColor(){
+		this.colorBorrado = this.colores.pop() || '';
+	}
 }

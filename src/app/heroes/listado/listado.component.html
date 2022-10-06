@@ -1,1 +1,21 @@
-<p>listado works!</p>
+<p>Para crear un componente de manera automatica usamos el siguiente comando en nuestra terminal:</p>
+<code><strong>ng generate component [name]</strong></code>
+
+<p>Listado de colores</p>
+<ul>
+	<!-- Directiva ngFor -->
+    <li *ngFor="let color of colores; let i = index">{{i+1}} {{color}}</li>
+</ul>
+
+<button (click)="borrarColor()">Borrar color</button>
+
+<!-- directiva ngIf -->
+<div *ngIf="colorBorrado; else noBorrado">
+	<h3>Color borrado <span id="heroeBorrado">{{colorBorrado}}</span></h3>
+</div>
+
+<ng-template #noBorrado>
+	<h3>No se a borrado nada</h3>
+</ng-template>
+
+
